@@ -1,0 +1,16 @@
+syntax = "proto3";
+package cardToCard;
+
+service cardToCard {
+  rpc CardToCard(CardToCardRequest) returns (CardToCardResponse);
+}
+
+message CardToCardRequest {
+  string dest_account_no = 1;
+  int64 amount = 2;
+}
+
+message CardToCardResponse {
+  string resp = 1;
+  int32 status = 2;
+}
